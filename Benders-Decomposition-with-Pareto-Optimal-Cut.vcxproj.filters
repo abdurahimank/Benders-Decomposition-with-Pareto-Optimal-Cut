@@ -22,4 +22,8 @@
   <ItemGroup>
     <None Include=".gitignore" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="main_with_pareto.txt" />
+    <Text Include="main_without_pareto.txt" />
+  </ItemGroup>
 </Project>
