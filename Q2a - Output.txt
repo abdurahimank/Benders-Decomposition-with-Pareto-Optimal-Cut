@@ -1,0 +1,50 @@
+Y = 2
+=========================================
+============ITERATION 1==============
+SOLVING SUB PROBLEM
+Sub Problem Solution Status: Optimal
+X_dual = [4, 4]
+sub_obj_val = 64
+Upper_bound = 84
+SOLVING AUXILIARY SUBPROBLEM
+Auxiliary Subproblem Solution Status: Optimal
+Pareto-Optimal Cut Added: theta + 13 * Y >= 90
+SOLVING MASTER PROBLEM
+Master Problem Solution Status: Unknown
+theta_var = 0
+Y = 7
+Lower_bound = 70
+=========================================
+============ITERATION 2==============
+SOLVING SUB PROBLEM
+Sub Problem Solution Status: Optimal
+X_dual = [0, 5]
+sub_obj_val = 15
+Upper_bound = 84
+SOLVING AUXILIARY SUBPROBLEM
+Auxiliary Subproblem Solution Status: Optimal
+Pareto-Optimal Cut Added: theta + 5 * Y >= 50
+SOLVING MASTER PROBLEM
+Master Problem Solution Status: Optimal
+theta_var = 25
+Y = 5
+Lower_bound = 75
+=========================================
+============ITERATION 3==============
+SOLVING SUB PROBLEM
+Sub Problem Solution Status: Optimal
+X_dual = [4, 4]
+sub_obj_val = 28
+Upper_bound = 78
+SOLVING AUXILIARY SUBPROBLEM
+Auxiliary Subproblem Solution Status: Optimal
+Pareto-Optimal Cut Added: theta + 12 * Y >= 88
+SOLVING MASTER PROBLEM
+Master Problem Solution Status: Optimal
+theta_var = 28
+Y = 5
+Lower_bound = 78
+
+C:\Users\laluv\Downloads\Problem2\x64\Debug\Problem2.exe (process 24732) exited with code 0 (0x0).
+To automatically close the console when debugging stops, enable Tools->Options->Debugging->Automatically close the console when debugging stops.
+Press any key to close this window . . .
