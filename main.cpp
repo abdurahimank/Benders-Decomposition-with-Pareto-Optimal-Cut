@@ -43,7 +43,7 @@ int main(int argc, char** argv)
 		IloNumVarArray aux_dual(env, 2, 0, IloInfinity, ILOFLOAT); // new
 
 		////////DECISION VARIABLES AND PARAMETERS FOR MASTER PROBLEM///////////
-		IloNumVar Y(env, 3, 12, ILOINT);
+		IloNumVar Y(env, 2, 12, ILOINT);
 		IloNumArray X_dual_val(env, 2);
 		//IloNumVar theta_var(env, -IloInfinity, IloInfinity, ILOFLOAT);
 		IloNumVar theta_var(env, 0, IloInfinity, ILOFLOAT);
@@ -83,8 +83,8 @@ int main(int argc, char** argv)
 		IloExpr obj_aux_sub(env);
 
 		// Y can be any value from the relative interior (2 < Y < 12), then we will have only one solution
-		// choosing y as 5 (obj fun of sub problem = max (12-y)u1 + (10-y)u2
-		obj_aux_sub = 7 * aux_dual[0] + 5 * aux_dual[1];
+		// choosing y as 5 (obj fun of sub problem = max (12-2y)u1 + (10-y)u2
+		obj_aux_sub = 2 * aux_dual[0] + 5 * aux_dual[1];
 		model_aux_sub.add(IloMaximize(env, obj_aux_sub));
 		model_aux_sub.add(3 * aux_dual[0] + aux_dual[1] <= 18);
 		model_aux_sub.add(aux_dual[0] + aux_dual[1] <= 8);
@@ -100,7 +100,7 @@ int main(int argc, char** argv)
 		/////////BEGIN ITERATIONS/////////////////////////////////
 		IloNum GAP = IloInfinity;
 		theta_val = 0;
-		Y_val = 3;
+		Y_val = 2;
 		IloNum sub_obj_val = 0;
 		IloNum Upper_bound = IloInfinity;
 		IloNum Lower_bound = 0;

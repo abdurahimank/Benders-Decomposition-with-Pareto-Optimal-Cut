@@ -83,8 +83,8 @@ int main(int argc, char** argv)
 		IloExpr obj_aux_sub(env);
 
 		// Y can be any value from the relative interior (2 < Y < 12), then we will have only one solution
-		// choosing y as 5 (obj fun of sub problem = max (12-y)u1 + (10-y)u2
-		obj_aux_sub = 7 * aux_dual[0] + 5 * aux_dual[1];
+		// choosing y as 5 (obj fun of sub problem = max (12-2y)u1 + (10-y)u2
+		obj_aux_sub = 2 * aux_dual[0] + 5 * aux_dual[1];
 		model_aux_sub.add(IloMaximize(env, obj_aux_sub));
 		model_aux_sub.add(3 * aux_dual[0] + aux_dual[1] <= 18);
 		model_aux_sub.add(aux_dual[0] + aux_dual[1] <= 8);
